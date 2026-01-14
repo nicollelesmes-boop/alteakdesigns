@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alteak Designs</title>
+    <link rel="stylesheet" href="alteak.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- lo busque en google para saber cómo poner iconos de redes sociales -->
+
+</head>
+
+<body>
+
+
+    <header class="navbar">
+
+        <nav class="navbar-container">
+            <!-- menu -->
+            <ul class="menu" id="menu">
+                <li><a href="#" onclick="mostrarSeccion('acerca')">Acerca de mí</a></li>
+                <li><a href="#" onclick="mostrarSeccion('cv')">Perfil profesional</a></li>
+                <li><a href="#" onclick="mostrarSeccion('proyectos')">Mis proyectos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+            </ul>
+
+            <!-- logo -->
+            <div class="logo" onclick="mostrarSeccion('bienvenida')" style="cursor: pointer;">
+                <img src="img/logo_2.svg" alt="Alteak Designs">
+            </div>
+
+            <!-- botonsito cuando sea responsive -->
+            <div class="hamburger" onclick="desplegarMenu()">
+                ☰ <!-- lo de hamburger lo busque en google para saber cómo hacerlo -->
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <!-- seccion bienvenida -->
+    <div id="bienvenida" class="seccion activa">
+        <div class="contenedor-bienvenida">
+            <div class="logo-orbita-container">
+                <div class="logo-3d">
+                    <!-- capas pa simular grosor 3D ( lo hice asi porque intente meter el modelo 3d de mi logo 
+                     y fail total asi que busque y me salio esta opcion), mejor algo que nada :) -->
+                    <img src="img/logo_2.svg" class="logo-layer" style="--z: 0px">
+                    <img src="img/logo_2.svg" class="logo-layer" style="--z: -1px; filter: brightness(0.9);">
+                    <img src="img/logo_2.svg" class="logo-layer" style="--z: -2px; filter: brightness(0.9);">
+                    <img src="img/logo_2.svg" class="logo-layer" style="--z: -3px; filter: brightness(0.8);">
+                    <img src="img/logo_2.svg" class="logo-layer" style="--z: -4px; filter: brightness(0.8);">
+                    <img src="img/logo_2.svg" class="logo-layer" style="--z: -5px; filter: brightness(0.7);">
+                    <img src="img/logo_2.svg" class="logo-layer" style="--z: -6px; filter: brightness(0.6);">
+                </div>
+            </div>
+            <h1>Dónde se crea con sentido...</h1>
+            <button class="btn-entrar" onclick="mostrarSeccion('acerca')">Entrar</button>
+        </div>
+    </div>
+
+
+    <!-- seccion acerca de mim -->
+    <div id="acerca" class="seccion">
+        <div class="contenedor-acerca">
+            <!-- div superior con mi nombre y profesion-->
+            <div class="acerca-sup animado">
+                <h1>¡Hola! Soy Nicolle Lesmes</h1>
+                <h2 class="subtitulo-acerca">Diseñadora de Producto</h2>
+            </div>
+
+            <!-- div medio: con texto de mi y mi pp -->
+            <div class="acerca-medio animado">
+                <div class="texto-acerca">
+                    <p>
+                        Me apasiona transformar ideas en objetos posibles y funcionales, explorando el equilibrio entre
+                        estética y uso. Creo en un diseño con intención, capaz de ir más allá de lo evidente para
+                        aportar significado, sensibilidad y coherencia a cada proyecto. Disfruto cada etapa del proceso
+                        creativo: investigar, dibujar, prototipar, modelar en 3D y materializar soluciones que cuentan
+                        una historia y dialogan con su contexto. Me defino como una persona curiosa, proactiva y
+                        resolutiva, en constante aprendizaje. Busco detectar tendencias, experimentar con nuevas formas
+                        de crear y adaptarme a los retos del diseño contemporáneo, aportando siempre una mirada fresca,
+                        creativa y consistente.
+                        <br>
+                        <br>.<br>
+                        <br>
+                        Passionate about transforming ideas into feasible and functional objects, my work explores the
+                        balance between aesthetics and use. I believe in design with intention, one that goes beyond the
+                        obvious to bring meaning, sensitivity, and coherence to each project. The creative process is
+                        central to my practice, from research and sketching to prototyping, 3D modeling, and
+                        materializing solutions that tell a story and engage with their context. Curious, proactive, and
+                        resourceful by nature, I am constantly learning, identifying trends, and experimenting with new
+                        ways of creating, adapting to the challenges of contemporary design while contributing a fresh,
+                        thoughtful, and consistent perspective.
+                    </p>
+                </div>
+                <div class="imagen-yo">
+                    <img src="img/nicolle.png" alt="">
+                    <!-- div abajo botnes para redes sociales-->
+                    <div class="redes-sociales">
+                        <a href="https://www.linkedin.com/in/nicolle-lesmes/" target="_blank" class="btn-social">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/alteak_designs_/" target="_blank" class="btn-social">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.behance.net/alteakdesigns" target="_blank" class="btn-social">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="mailto:alteakdesigns@gmail.com" target="_blank" class="btn-social">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- seccion pp -->
+    <div id="cv" class="seccion animado">
+        <h1 class="titulo-perfil">Perfil Profesional</h1>
+        <div class="contenedor-cv">
+            <!-- columna izq -->
+            <div class="columna-izq">
+                <div class="bloque-cv">
+                    <h3>Información Personal</h3>
+                    <ul>
+                        <li>25 años</li>
+                        <li>Madrid, España, 28009</li>
+                        <li>Colombiana</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="bloque-cv">
+                    <h3>Habilidades Técnicas</h3>
+                    <ul>
+                        <li>Rhinoceros</li>
+                        <li>Adobe (Illustrator, Photoshop, Dimension, InDesign)</li>
+                        <li>SketchBook</li>
+                        <li>Microsoft Programas</li>
+                        <li>Fusion 360</li>
+                        <li>KeyShot</li>
+                        <li>AutoCad</li>
+                        <li>SolidEdge</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="bloque-cv">
+                    <h3>Habilidades Personales</h3>
+                    <ul>
+                        <li>Resolución de problemas</li>
+                        <li>Manejo de conflictos</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Adaptabilidad</li>
+                        <li>Creatividad</li>
+                        <li>Comunicación</li>
+                        <li>Gestión eficaz del tiempo</li>
+                    </ul>
+                </div>
+                <br>
+            </div>
+
+            <!-- columna der -->
+            <div class="columna-der">
+                <div class="bloque-cv">
+                    <h3>Experiencia</h3>
+                    <div class="cv">
+                        <h4>María Torné Cerámica & Joyería, práctica (Octubre 2025 - Actual)</h4>
+                        <p>Experiencia en la fabricación de joyas en porcelana, abarcando todo el proceso desde la
+                            preparación del material hasta el acabado, control de calidad y embalaje. Manejo de
+                            componentes metálicos, montaje final de piezas y desarrollo de plantillas y prototipos
+                            mediante modelado e impresión 3D.</p>
+                        <br>
+                        <h4>Old Jeffrey, práctica (Octubre 2023 - Junio 2024)</h4>
+                        <p>Encargada de la conceptualización y desarrollo de una amplia gama de productos para la marca,
+                            reflejando su identidad. Estando presente en todas las etapas del proceso, desde el diseño
+                            hasta su comercialización.</p>
+                    </div>
+                </div>
+
+                <div class="bloque-cv">
+                    <h3>Estudios</h3>
+                    <div class="cv">
+                        <h4>Grado Oficial Diseño de Producto (2022 - Actual)</h4>
+                        <p>UDIT, Universidad de Diseño, Innovación y Tecnología.<br>Madrid, España.</p>
+                    </div>
+                </div>
+
+                <div class="bloque-cv">
+                    <h3>Certificaciones Cursos</h3>
+                    <div class="cv">
+                        <h4>Business Management Institute of Berlin - Enero 2021, Online</h4>
+                        <p class="detalle-curso">Basics of Innovation Management<br>Certificate ID: 322944-161-127-5324
+                        </p>
+                        <br>
+                        <h4>Business Management Institute of Berlin - Enero 2021, Online</h4>
+                        <p class="detalle-curso">Leadership and Team Development<br>Certificate ID: 322944-161-222-7803
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bloque-cv">
+                    <h3>Idiomas</h3>
+                    <div class="cv">
+                        <p>Inglés (EF Certificado 70/C1 - Avanzado)</p>
+                        <p>Español - Nativo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--titulo de miss proyectos-->
+    <div id="proyectos" class="seccion animado">
+        <div class="portada-proyectos">
+            <h1>Mis proyectos</h1>
+            <p>Desliza para ver más</p>
+            <a href="#galeria" class="flecha-bajar" onclick="deslizarAbajo(event)"></a>
+        </div>
+
+        <div id="galeria" class="contenedor-galeria">
+            <!-- proyecto 1: ONDARA -->
+            <a href="#" class="proyecto" onclick="verProyecto('ondara')">
+                <img src="img/ondara.jpg" alt="">
+                <!-- al pasar mouse -->
+                <div class="info-overlay">
+                    <h3>ONDARA</h3>
+                    <p>Luminaria Conceptual - Impresión 3D PETG, 2025</p>
+                </div>
+            </a>
+
+            <!-- proyecto 2:NAYA -->
+            <a href="#" class="proyecto" onclick="verProyecto('naya')">
+                <img src="img/naya.jpeg" alt="">
+                <!-- al pasar mouse -->
+                <div class="info-overlay">
+                    <h3>NAYA</h3>
+                    <p>Joyería Conceptual - Impresión Resina 3D, 2025</p>
+                </div>
+            </a>
+
+
+            <!-- proyecto 3:DIOR`S EMBRACE-->
+            <a href="#" class="proyecto" onclick="verProyecto('dior')">
+                <img src="img/diorlogo.png" alt="">
+                <!-- al pasar mouse -->
+                <div class="info-overlay">
+                    <h3>DIOR`S EMBRACE</h3>
+                    <p> Regalo Corporativo - Moda e Identidad de empresa, 2025</p>
+                </div>
+            </a>
+
+            <!-- proyecto 4: OJ NAPOLI -->
+            <a href="#" class="proyecto" onclick="verProyecto('napoli')">
+                <img src="img/oldjeffrey.png" alt="">
+                <!-- al pasar mouse -->
+                <div class="info-overlay">
+                    <h3>OJ NAPOLI</h3>
+                    <p> Bermudas para Old Jeffrey - Moda, 2024</p>
+                </div>
+            </a>
+
+            <!-- proyecto 5: SOLERIS -->
+            <a href="#" class="proyecto" onclick="verProyecto('soleris')">
+                <img src="img/solerisportada.jpg" alt="">
+                <!-- al pasar mouse -->
+                <div class="info-overlay">
+                    <h3>SOLERIS</h3>
+                    <p>Luminaria Conceptual - CNC & Rhinoceros, 2025</p>
+                </div>
+            </a>
+
+
+            <!-- proyecto 6: GIRALIA  -->
+            <a href="#" class="proyecto" onclick="verProyecto('giralia')">
+                <img src="img/giralia logo.png" alt="">
+                <!-- al pasar mouse -->
+                <div class="info-overlay">
+                    <h3>GIRALIA</h3>
+                    <p> Hostelería para Quimbaya - Mobiliario Hostelería, 2024</p>
+                </div>
+            </a>
+
+            <!-- proyecto 7: SINGULAR ESSENCE  -->
+            <a href="#" class="proyecto" onclick="verProyecto('singular')">
+                <img src="img/perfumelogo.png" alt="">
+                <!-- al pasar mouse -->
+                <div class="info-overlay">
+                    <h3>SINGULAR ESSENCE</h3>
+                    <p> Perfume Conceptual - Packaging & Branding, 2024</p>
+                </div>
+            </a>
+
+            <!-- proyecto 8: ZENTIDE  -->
+            <a href="#" class="proyecto" onclick="verProyecto('zentide')">
+                <img src="img/zenportada.png" alt="">
+                <!-- al pasar mouse -->
+                <div class="info-overlay">
+                    <h3>ZENTIDE</h3>
+                    <p> Proyecto Verallia - Branding & Packaging, 2023</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <!-- pag de c/proyecto al hacer click en la foto  -->
+
+    <!-- proyecto 1: ondara -->
+    <div id="ondara" class="seccion">
+        <div class="detalle-nav">
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+        </div>
+
+        <div class="ondara-titulo">
+            <h1>Ondara</h1>
+            <h2 class="subtitulo">Ondas de luz</h2>
+        </div>
+
+        <div class="ondara-contenido">
+            <!-- primera seccion sup con foto y text-->
+            <div class="ondara-sup">
+                <div class="ondara-img-principal">
+                    <img src="img/ondara1.jpg" alt="">
+                </div>
+                <div class="ondara-descripcion">
+                    <p>
+                        Nace de la experimentación con el diseño paramétrico, dejando atrás la espiral tradicional para
+                        explorar un lenguaje más fluido y controlado. Las ondas construyen la forma y dirigen la luz,
+                        generando un movimiento suave que cambia según el punto de vista y el espacio. El resultado es
+                        una pieza donde la geometría y la luz se entienden como un mismo gesto.
+                    </p>
+                    <br> . <br>
+                    <br>
+                    <p>
+                        It emerges from experimentation with parametric design, moving beyond the traditional spiral to
+                        explore a more fluid and controlled language. The waves shape the form and guide the light,
+                        creating a soft movement that changes with the viewpoint and the surrounding space. The result
+                        is a piece where geometry and light are understood as a single gesture.
+                    </p>
+                </div>
+            </div>
+
+            <!-- cuadricula de imags -->
+            <div class="ondara-galeria">
+                <img src="img/ondara2.jpg" alt="">
+                <img src="img/ondara 3.jpg" alt="">
+                <img src="img/ondara4.jpg" alt="">
+                <img src="img/ondara5.jpg" alt="">
+
+                <!-- video proceso rhino -->
+                <div class="ondara-video" onclick="reproducirVideo(this)">
+                    <video src="videos/ondaravideo.mp4" style="width: 100%; height: 100%; object-fit: cover;"></video>
+                    <div class="play-icon"> ▶ </div> <!-- lo busque en google -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- proyecto 2: naya -->
+    <div id="naya" class="seccion">
+        <div class="detalle-nav">
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+        </div>
+
+        <div class="titulo-naya">
+            <h1>Naya</h1>
+            <h2 class="subtitulo">Una nueva visión</h2>
+        </div>
+
+        <div class="cuadricula-proyecto">
+            <!-- primera seccion fotos con txto -->
+            <div class="bloque-sup-naya">
+                <div class="cuadricula-fotos-modelo">
+                    <img src="img/naya1.png" alt="">
+                    <img src="img/naya2.png" alt="">
+                    <img src="img/naya3.png" alt="">
+                    <img src="img/naya4.png" alt="">
+                </div>
+                <div class="texto-descripcion">
+                    <p>
+                        Colección de pendientes que re-imagina la colonización colombiana desde un futuro
+                        alternativo, donde las culturas indígenas triunfan. Fusiona estética indígena Colombiana y
+                        medieval con diseño 3D, simbolizando resistencia, tradición e innovación.
+                        <br><br>
+                        .
+                        <br><br>
+                        A collection of earrings reinterpret the Colombian colonization from an alternative
+                        future where the Indigenous cultures triumph. Merges indigenous Colombian aesthetics and
+                        medieval with 3D design, symbolizing resistance, tradition and innovation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- segunda seccion fotos otras -->
+            <div class="bloque-medio">
+                <img src="img/naya5.jpeg" alt="">
+                <img src="img/naya6.jpeg" alt="">
+                <img src="img/naya7.jpeg" alt="">
+                <img src="img/naya8.jpeg" alt="">
+            </div>
+
+            <!-- tercera seccion render grande final -->
+            <div class="bloque-inferior">
+                <img src="img/naya9.png" alt="" class="img-full">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- proyecto 3: dior's embrace -->
+    <div id="dior" class="seccion">
+        <div class="detalle-nav">
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+        </div>
+
+        <div class="dior-titulo">
+            <h1>Dior's Embrace</h1>
+            <h2 class="subtitulo">Un gesto, un legado...</h2>
+        </div>
+
+        <div class="dior-contenido">
+            <!-- sección sup con foto y texto -->
+            <div class="dior-sup">
+                <div class="dior-img-principal">
+                    <img src="img/dior1.png" alt="">
+                </div>
+                <div class="dior-descripcion">
+                    <p>
+                        Creada en colaboración con Dior, ofrece una experiencia inmersiva que equilibra lujo y
+                        sostenibilidad. La caja combina cartón con textil reciclado que aportan color y simbolizan
+                        compromiso ambiental. Su diseño versátil incluye espacio para obsequios, hecho con rafia
+                        reciclada, y una carta personalizada, reforzando la exclusividad y conexión emocional con el
+                        personal de Dior.
+                    </p>
+                    <br> . <br>
+                    <br>
+                    <p>
+                        Created in collaboration with Dior, it provides an immersive experience that balances luxury and
+                        sustainability. The box combines cardboard with recycled textiles, adding color while
+                        symbolizing environmental commitment. Its versatile design includes space for gifts made with
+                        recycled raffia and a personalized note, enhancing exclusivity and fostering an emotional
+                        connection with Dior's staff.
+                    </p>
+                </div>
+            </div>
+
+            <!-- fotos cuadricula -->
+            <div class="dior-galeria">
+                <img src="img/dior2.png" alt="">
+                <img src="img/dior3.png" alt="">
+                <img src="img/dior4.png" alt="">
+                <!-- video  -->
+                <div class="dior-video" onclick="reproducirVideo(this)">
+                    <video src="videos/dior5.mp4"></video>
+                    <div class="play-icon">▶</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- proyecto 4: oj napoli -->
+    <div id="napoli" class="seccion">
+        <div class="detalle-nav">
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+        </div>
+
+        <div class="titulo-napoli">
+            <h1>OJ Napoli</h1>
+            <h2 class="subtitulo">Flujo geométrico, esencia costera</h2>
+        </div>
+
+        <div class="napoli-contenido">
+            <!-- seccion sup imagen y etexto-->
+            <div class="napoli-sup">
+                <div class="napoli-descripcion">
+                    <p>
+                        Colección de bermudas masculinas para Old Jeffrey, que emplea diversas gamas de
+                        colores y
+                        figuras geométricas con un efecto desgastado, creando un equilibrio entre un
+                        estilo moderno y un
+                        toque vintage, ideal para destacar con originalidad.
+                    </p>
+                    <br> . <br><br>
+                    <p>
+                        A men's bermuda shorts collection for Old Jeffrey, featuring a diverse color
+                        palette and
+                        geometric patterns with a distressed finish, striking a refined balance between
+                        contemporary
+                        design and vintage appeal, ideal for making a distinctive statement.
+                    </p>
+                </div>
+
+                <!-- imgs al lado del texto -->
+                <div class="napoli-sup-imgs">
+                    <img src="img/oj1.png" alt="">
+                    <img src="img/oj2.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- fotos seccion inferior -->
+            <div class="napoli-galeria">
+
+                <img src="img/oj3.jpeg" alt="">
+                <img src="img/oj4.jpg" alt="">
+                <img src="img/oj5.jpg" alt="">
+
+
+                <img src="img/oj6.jpg" alt="">
+                <img src="img/oj7.jpg" alt="">
+                <img src="img/oj8.jpg" alt="">
+
+
+                <div class="napoli-galeria-abajo">
+                    <img src="img/oj9.jpg" alt="">
+                    <img src="img/oj10.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- proyecto 5: soleris-->
+    <div id="soleris" class="seccion">
+        <div class="detalle-nav">
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+        </div>
+
+        <div class="titulo-soleris">
+            <h1>Soleris</h1>
+            <p class="subtitulo">Un fragmento de luz...</p>
+        </div>
+
+        <div class="cuadricula-soleris">
+            <!-- bloque usperior con texto e imagen principal -->
+            <div class="bloque-sup-soleris">
+                <div class="texto-soleris">
+                    <p>
+                        Conexión entre la luz y el universo, simbolizando el equilibrio orbital y el
+                        dinamismo cósmico.
+                        Sus órbitas evocan el movimiento planetario mientras la base rocosa refleja
+                        solidez y
+                        estabilidad, ofreciendo un contraste entre lo etéreo y lo terrenal. Sus
+                        laterales están
+                        diseñados para servir como prácticos sujetalibros, integrando versatilidad y
+                        elegancia en un
+                        solo objeto. Soleris, una obra que transforma cualquier ambiente con su
+                        presencia escultórica y
+                        simbólica.
+                        <br>.<br><br>
+                        Connection between light and the universe, symbolizing orbital balance and
+                        cosmic dynamism.
+                        Their orbits evoke planetary motion while the rocky base reflects solidity and
+                        stability,
+                        offering a contrast between the ethereal and the earthly. Its sides are designed
+                        to serve as
+                        practical bookbinders, integrating versatility and elegance in a single object.
+                        Soleris, a work
+                        that transforms any environment with its sculptural and symbolic presence.
+                    </p>
+                </div>
+                <div class="imagen-grande-soleris">
+                    <img src="img/soleris1.jpg" alt="Soleris Principal">
+                </div>
+            </div>
+
+            <!-- bloque inferior con3 Imagenes -->
+            <div class="soleris-galeria">
+                <img src="img/soleris2.jpg" alt="">
+                <img src="img/soleris3.jpg" alt="">
+                <img src="img/soleris4.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- proyecto 6: giralia -->
+    <div id="giralia" class="seccion">
+        <div class="detalle-nav">
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+        </div>
+
+        <div class="titulo-giralia">
+            <h1>Giralia</h1>
+            <p class="subtitulo">Transforma mezclas, eleva tu coctelería</p>
+        </div>
+
+        <div class="cuadricula-giralia">
+
+            <!-- bloque superior con texto e imagen principal -->
+            <div class="bloque-sup-giralia">
+                <div class="texto-giralia">
+                    <p>
+                        Giralia, un botellero colgante giratorio desarrollado en colaboración con el
+                        Restaurante
+                        Quimbaya by Edwin Rodriguez ubicado en Madrid, España. Diseñado para optimizar
+                        el espacio
+                        superior de la barra de cocktails, que combina funcionalidad y estética para el
+                        almacenamiento
+                        de botellas, demostrando así la capacidad innovadora en el diseño de productos
+                        para la
+                        hostelería.
+                        <br> . <br><br>
+                        Giralia, a rotating hanging bottle rack developed in collaboration with Quimbaya
+                        Restaurant by
+                        Edwin Rodriguez located in Madrid, Spain. Designed to optimize the upper space
+                        of the cocktail
+                        bar, it combines functionality and aesthetics for bottle storage, thus
+                        showcasing innovative
+                        capability in product design for the hospitality industry.
+                    </p>
+                </div>
+                <div class="imagen-grande-giralia">
+                    <img src="img/quimbaya1.png" alt="">
+                </div>
+            </div>
+            <!-- bloque inferior con 3img y 1 video -->
+            <div class="giralia-galeria">
+                <img src="img/quimbaya0.jpg" alt="">
+                <img src="img/quimbaya2.jpeg" alt="">
+                <img src="img/quimbaya5.png" alt="">
+                <img src="img/quimbaya4.png" alt="">
+                <img src="img/quimbaya3.png" alt="">
+                <div class="giralia-video" onclick="reproducirVideo(this)">
+                    <video src="videos/quimbaya-video.mp4"></video>
+                    <div class="play-icon"> ▶ </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- proyecto 7: singular essence -->
+    <div id="singular" class="seccion">
+        <div class="detalle-nav">
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+        </div>
+
+        <div class="titulo-singular">
+            <h1>Singular Essence</h1>
+            <p class="subtitulo">For Him, For Her...</p>
+        </div>
+
+        <div class="cuadricula-singular">
+
+            <!-- bloque superior con img y text -->
+            <div class="bloque-sup-singular">
+                <div class="imagen-grande-singular">
+                    <img src="img/perfume1.jpeg" alt="">
+                </div>
+                <div class="texto-singular">
+                    <p>
+                        Diseño de envase de perfume unisex, inspirado en la obra "Estudio sexual
+                        indiferenciado" de
+                        Teresa Solar. En el arte contemporáneo, la identidad de género es un tema que
+                        muchos artistas
+                        están abordando, y Solar desafía las etiquetas tradicionales. Este diseño
+                        reflexiona sobre la
+                        diversidad sexual y la no conformidad con las categorías de género en la vida
+                        cotidiana. La obra
+                        de Solar nos recuerda que las personas van más allá de las etiquetas de hombre o
+                        mujer, llamando
+                        a la diversidad y desafiando los moldes establecidos.
+                        <br>.<br>
+                        <br>
+                        Perfume packaging design, inspired by Teresa Solar's artwork "Indifferent Sexual
+                        Study". In
+                        contemporary art, gender identity is a theme many artists are exploring, and
+                        Solar challenges
+                        traditional labels. This design reflects on sexual diversity and non-conformity
+                        with gender
+                        categories in everyday life. Solar's work reminds us that people transcend
+                        labels of man or
+                        woman, advocating for diversity and challenging established norms.
+                    </p>
+                </div>
+            </div>
+
+            <!-- bloque inferior con 7imgenes -->
+
+            <div class="perfume-galeria">
+                <img src="img/perfume3.jpg" alt="">
+                <img src="img/perfume7.jpg" alt="">
+                <img src="img/perfume8.jpg" alt="">
+                <img src="img/perfume9.jpg" alt="">
+                <img src="img/perfume6.png" alt="">
+                <img src="img/perfume5.jpg" alt="">
+                <img src="img/perfume4.jpeg" alt="">
+                <img src="img/perfume2.jpg" alt="">
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- proyecto 8: zentide -->
+    <div id="zentide" class="seccion">
+        <div class="detalle-nav">
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+        </div>
+
+        <div class="titulo-zentide">
+            <h1>ZenTide</h1>
+            <p class="subtitulo">Ondas de bienestar</p>
+        </div>
+
+        <div class="cuadricula-zentide">
+
+            <!-- seccion superior texto e imagen -->
+            <div class="bloque-sup-zentide">
+                <div class="texto-zentide">
+                    <p>
+                        Zen tide es más que una apariencia estética: brinda una experiencia sensorial
+                        para disfrutar un
+                        momento de tranquilidad y explorar la salud mental y física. Cada onda
+                        representa cuerpo, mente
+                        y espíritu, invitándote a conectar con tus sentidos, encontrar equilibrio mental
+                        y sumergirte en
+                        una experiencia espiritual. Al descorchar y saborear cada vino, se crea un
+                        espacio para la
+                        relajación, la contemplación y el crecimiento personal.
+                        <br>.<br><br>
+                        Zen tide is more than an aesthetic appearance: it provides a sensory experience
+                        to enjoy a
+                        moment of tranquility and explore mental and physical health. Each wave
+                        represents body, mind
+                        and spirit, inviting you to connect with your senses, find mental balance and
+                        immerse yourself
+                        in a spiritual experience. Uncorking and tasting each wine creates a space for
+                        relaxation,
+                        contemplation and personal growth.
+                    </p>
+                </div>
+                <div class="imagen-banner-zentide">
+                    <img src="img/zen1.jpg" alt="">
+                </div>
+            </div>
+
+
+            <!-- seccion inferior -->
+            <div class="zentide-galeria">
+                <img src="img/zen2.png" alt="">
+                <img src="img/zen3.png" alt="">
+                <img src="img/zen4.png" alt="">
+                <img src="img/zen5.png" alt="">
+                <img src="img/zen6.png" alt="">
+                <img src="img/zen7.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- zoom de las imgs -->
+    <div id="visor" class="visor-imagen" onclick="cerrarFoto()">
+        <span class="cerrar-visor">×</span>
+        <img id="img-visor" src="" alt="Imagen Completa">
+    </div>
+
+
+
+
+
+    <!-- seccion contacto -->
+
+    <div id="contacto" class="seccion">
+        <form id="contactForm" class="animado">
+            <h2 class="titulo-contacto">Contacto</h2>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required>
+
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="4" required></textarea>
+
+            <button type="submit">
+                <p id="texto-enviar">Enviar</p>
+            </button>
+
+            <div class="redes-sociales" style="margin-top: 30px;">
+                <a href="mailto:alteakdesigns@gmail.com" class="btn-social">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+<script src="alteak.js"></script>
+
+</html>
